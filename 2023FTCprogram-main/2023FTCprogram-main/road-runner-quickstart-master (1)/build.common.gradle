@@ -63,7 +63,7 @@ android {
 
         /**
          * We keep the versionCode and versionName of robot controller applications in sync with
-         * the master information published in the AndroidManifest.xml file of the FtcRobotController
+         * the master information published in the AndroidManifest.xml file of the main
          * module. This helps avoid confusion that might arise from having multiple versions of
          * a robot controller app simultaneously installed on a robot controller device.
          *
@@ -73,7 +73,7 @@ android {
          * @see <a href="http://developer.android.com/tools/building/configuring-gradle.html">Configure Your Build</a>
          * @see <a href="http://developer.android.com/tools/publishing/versioning.html">Versioning Your App</a>
          */
-        def manifestFile = project(':FtcRobotController').file('src/main/AndroidManifest.xml');
+        def manifestFile = project(':main').file('src/main/AndroidManifest.xml');
         def manifestText = manifestFile.getText()
         //
         def vCodePattern = Pattern.compile("versionCode=\"(\\d+(\\.\\d+)*)\"")
